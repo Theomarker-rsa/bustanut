@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090812">
+  <meta name="description" content="A tiny escape from boring. Play quick games, find a challenge, and make today more fun.">
+  <title>FUNZONE — Your next adventure starts here</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="loader" id="loader" aria-label="Loading FUNZONE">
+    <div class="loader-mark">F<span>!</span></div>
+    <div class="loader-track"><i></i></div>
+    <p>Loading your fun...</p>
+  </div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="FUNZONE home"><span class="brand-icon">F<span>!</span></span><span>FUNZONE</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#games">Mini Games</a>
+      <a class="nav-link" href="#random">Random Fun</a>
+      <a class="nav-link" href="#challenges">Challenges</a>
+      <a class="nav-link" href="#about">About</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="soundToggle" aria-label="Turn sound off" title="Sound on">♫</button>
+      <button class="icon-button" id="themeToggle" aria-label="Switch to light theme" title="Switch theme">☼</button>
+      <button class="avatar-button" id="settingsOpen" aria-label="Open settings">✦</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> YOUR OFFICIAL BOREDOM BREAKER</div>
+        <h1>BORED?<br>LET'S <span class="gradient-text">FIX THAT!</span></h1>
+        <p class="hero-subtitle">Your next adventure starts here.<br><span>Good vibes, tiny games, zero commitment.</span></p>
+        <div class="hero-buttons">
+          <a class="button button-primary" href="#games">LET'S HAVE FUN <span>↗</span></a>
+          <button class="button button-quiet" id="surpriseButton"><span class="sparkle">✦</span> Surprise me</button>
+        </div>
+        <div class="hero-proof"><div class="avatar-stack"><i>😎</i><i>🦄</i><i>🐸</i><b>+</b></div><span><strong id="playerCount">2,481</strong> people dodging boredom today</span></div>
+      </div>
+      <div class="hero-art" aria-label="A playful floating planet illustration">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="planet"><span class="planet-face">◡</span><i class="planet-star star-a">✦</i><i class="planet-star star-b">✦</i></div>
+        <div class="float-chip chip-game"><span>🎮</span> GAME ON</div>
+        <div class="float-chip chip-mood"><span>✨</span> GOOD MOOD</div>
+        <div class="floating-shape shape-cross">✳</div><div class="floating-shape shape-circle"></div>
+        <div class="art-caption"><span class="caption-dot"></span> THE FUN IS OUT THERE</div>
+      </div>
+    </section>
+
+    <section class="section-wrap featured-section" aria-labelledby="featuredTitle">
+      <div class="section-heading compact-heading"><div><div class="eyebrow">A LITTLE SOMETHING FOR YOU</div><h2 id="featuredTitle">Today's <span class="gradient-text">pick</span></h2></div><button class="text-button" id="shuffleFeatured">Shuffle pick <span>⟳</span></button></div>
+      <article class="featured-card" id="featuredCard">
+        <div class="featured-visual" id="featuredVisual"><span class="featured-emoji" id="featuredEmoji">🎯</span><span class="visual-orbit"></span><span class="visual-spark">✦</span></div>
+        <div class="featured-copy"><span class="pill-label" id="featuredTag">QUICK GAME</span><h3 id="featuredName">Reaction time</h3><p id="featuredDescription">Think you're quick? Put your reflexes to the test.</p><button class="button button-small button-primary" id="featuredPlay">Play this one <span>→</span></button></div>
+        <div class="featured-index"><span>YOUR DAILY</span><strong>01</strong><span>DOSE OF FUN</span></div>
+      </article>
+    </section>
+
+    <section class="section-wrap games-section" id="games">
+      <div class="section-heading"><div><div class="eyebrow">PICK YOUR POISON (THE FUN KIND)</div><h2>Quick-play <span class="gradient-text">arcade</span></h2><p class="section-intro">No downloads. No pressure. Just hit play.</p></div><span class="heading-count"><i></i> 7 GAMES READY</span></div>
+      <div class="games-grid">
+        <article class="game-card game-rps"><div class="card-top"><span class="game-icon">✊</span><span class="game-number">01</span></div><h3>Rock, Paper, Scissors</h3><p>Outsmart the computer. Best of luck.</p><div class="game-widget"><div class="rps-score"><span>You <b id="rpsPlayerScore">0</b></span><span class="score-divider">:</span><span><b id="rpsComputerScore">0</b> CPU</span></div><p class="game-feedback" id="rpsFeedback" aria-live="polite">Choose your move!</p><div class="rps-actions"><button class="choice-button" data-rps="rock" aria-label="Choose rock">✊</button><button class="choice-button" data-rps="paper" aria-label="Choose paper">✋</button><button class="choice-button" data-rps="scissors" aria-label="Choose scissors">✌️</button></div></div><button class="reset-link" data-reset="rps">Reset score ↻</button></article>
+        <article class="game-card game-guess"><div class="card-top"><span class="game-icon">🔮</span><span class="game-number">02</span></div><h3>Number detective</h3><p>Find the secret number from 1 to 100.</p><div class="game-widget"><form class="inline-form" id="guessForm"><input id="guessInput" type="number" min="1" max="100" placeholder="Your guess" aria-label="Your number guess" required><button class="mini-button" type="submit">Guess</button></form><p class="game-feedback" id="guessFeedback" aria-live="polite">I've picked a number. Go!</p><span class="subtle-score" id="guessAttempts">0 guesses</span><span class="subtle-score" id="guessBest">Best: —</span></div><button class="reset-link" data-reset="guess">New number ↻</button></article>
+        <article class="game-card game-ttt"><div class="card-top"><span class="game-icon">⭕</span><span class="game-number">03</span></div><h3>Tic-tac-toe</h3><p>Challenge a friend or take on the CPU.</p><div class="game-widget"><div class="mode-switch" role="group" aria-label="Tic-tac-toe opponent"><button class="mode-button selected" data-mode="ai">vs CPU</button><button class="mode-button" data-mode="friend">2 players</button></div><div class="rps-score ttt-score" id="tttScore">You 0 : 0 CPU</div><p class="game-feedback" id="tttFeedback" aria-live="polite">Your turn — X</p><div class="ttt-board" id="tttBoard" role="grid" aria-label="Tic-tac-toe board"></div></div><button class="reset-link" data-reset="ttt">New round ↻</button></article>
+        <article class="game-card game-memory"><div class="card-top"><span class="game-icon">🧠</span><span class="game-number">04</span></div><h3>Memory match</h3><p>Flip, remember, and match all 6 pairs.</p><div class="game-widget"><div class="memory-meta"><span id="memoryMoves">0 moves</span><span id="memoryMatches">0 / 6 matched</span><span id="memoryBest">Best: —</span></div><div class="memory-board" id="memoryBoard"></div><p class="game-feedback" id="memoryFeedback" aria-live="polite">Find the matching pairs!</p></div><button class="reset-link" data-reset="memory">Shuffle cards ↻</button></article>
+        <article class="game-card game-reaction"><div class="card-top"><span class="game-icon">⚡</span><span class="game-number">05</span></div><h3>Reflex rush</h3><p>Wait for green, then tap as fast as you can.</p><div class="game-widget"><button class="reaction-pad" id="reactionPad" data-state="idle"><span id="reactionText">Start test</span></button><p class="game-feedback" id="reactionFeedback" aria-live="polite">Your best: <span id="reactionBest">—</span></p></div><button class="reset-link" data-reset="reaction">Reset test ↻</button></article>
+        <article class="game-card game-click"><div class="card-top"><span class="game-icon">👆</span><span class="game-number">06</span></div><h3>Click-o-matic</h3><p>How many clicks can you get in 10 seconds?</p><div class="game-widget click-widget"><div class="click-count" id="clickCount">0</div><button class="mini-button click-button" id="clickButton">Start clicking!</button><p class="game-feedback" id="clickFeedback" aria-live="polite">Ready when you are.</p><span class="subtle-score" id="clickBest">Best: 0</span></div><button class="reset-link" data-reset="click">Reset challenge ↻</button></article>
+        <article class="game-card game-quiz"><div class="card-top"><span class="game-icon">💡</span><span class="game-number">07</span></div><h3>Trivia pop</h3><p>Random little facts for your big brain.</p><div class="game-widget"><span class="quiz-score">SCORE <b id="quizScore">0</b></span><p class="quiz-question" id="quizQuestion">Ready for a brain snack?</p><div class="quiz-options" id="quizOptions"><button class="mini-button" id="startQuiz">Start quiz</button></div><p class="game-feedback" id="quizFeedback" aria-live="polite"></p></div><button class="reset-link" data-reset="quiz">Restart quiz ↻</button></article>
+      </div>
+    </section>
+
+    <section class="random-section" id="random">
+      <div class="section-wrap random-layout">
+        <div class="random-copy"><div class="eyebrow">THE CURE FOR “IDK, YOU PICK”</div><h2>I'm <span class="gradient-text">bored!</span></h2><p>Tap a button. Get a tiny plot twist for your day.</p>
+          <div class="generator-tabs" role="group" aria-label="Choose something fun"><button class="generator-button active" data-generator="activity">🎲 Activity</button><button class="generator-button" data-generator="joke">😄 Joke</button><button class="generator-button" data-generator="fact">🧠 Fact</button><button class="generator-button" data-generator="challenge">🔥 Challenge</button><button class="generator-button" data-generator="wyr">🤔 Rather</button><button class="generator-button" data-generator="truth">🎤 Truth or dare</button><button class="generator-button" data-generator="starter">💬 Conversation</button></div>
+        </div>
+        <div class="random-result-card" id="randomResultCard"><div class="result-top"><span class="result-icon" id="resultIcon">🎲</span><span class="pill-label" id="resultCategory">YOUR NEXT MOVE</span></div><p class="result-text" id="resultText" aria-live="polite">A little surprise is just one tap away.</p><button class="button button-primary result-button" id="generateButton">Give me one <span>→</span></button><span class="result-decoration">✳</span></div>
+      </div>
+    </section>
+
+    <section class="section-wrap challenge-section" id="challenges">
+      <div class="section-heading"><div><div class="eyebrow">TINY MISSIONS. BIG MAIN-CHARACTER ENERGY.</div><h2>Today's <span class="gradient-text">challenges</span></h2><p class="section-intro">Complete a challenge and stack up your good-day points.</p></div><div class="points-chip">✦ <strong id="pointsTotal">0</strong> POINTS</div></div>
+      <div class="challenge-layout">
+        <div class="challenge-list" id="challengeList"></div>
+        <aside class="rewards-card"><div class="rewards-header"><span class="rewards-icon">🏆</span><div><span class="eyebrow">YOUR FUN STATS</span><h3>Level up!</h3></div></div><div class="level-row"><span id="levelName">Fun Rookie</span><span id="levelPoints">0 / 100 XP</span></div><div class="progress-track"><i id="levelProgress"></i></div><p class="reward-note" id="rewardNote">Play games and finish challenges to earn XP.</p><div class="achievement-title">YOUR BADGES <span id="badgeCount">0/4</span></div><div class="badges" id="badges"><span class="badge locked" data-badge="first">🎮<small>First Play</small></span><span class="badge locked" data-badge="winner">🥇<small>Winner</small></span><span class="badge locked" data-badge="streak">🔥<small>3-day streak</small></span><span class="badge locked" data-badge="collector">🎯<small>Challenge ace</small></span></div></aside>
+      </div>
+      <div class="leaderboard"><div class="leaderboard-heading"><div><span class="eyebrow">THE FRIENDLY COMPETITION</span><h3>Leaderboard <span class="sample-tag">JUST FOR FUN</span></h3></div><span class="leaderboard-caption">A little inspiration, no pressure.</span></div><div class="leaderboard-list" id="leaderboardList"></div></div>
+    </section>
+
+    <section class="about-section" id="about"><div class="section-wrap about-inner"><div class="about-stamp">✦</div><div><div class="eyebrow">A SMALL CORNER OF THE INTERNET</div><h2>Made for your <span class="gradient-text">“one more round”</span> moment.</h2><p>FUNZONE is a free little playground for the in-between moments. Take a break, play something silly, and head back to your day a bit brighter.</p></div><a class="button button-outline" href="#home">Back to top ↑</a></div></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-icon">F<span>!</span></span><span>FUNZONE</span></a><p>Made for fun. Powered by your imagination.</p><div class="social-links"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">ig</a><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">♪</a><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">▶</a></div><span class="copyright">© <span id="year"></span> FUNZONE. Keep the good times rolling.</span></footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+  <dialog class="settings-dialog" id="settingsDialog"><form method="dialog"><button class="dialog-close" aria-label="Close settings">×</button><span class="eyebrow">MAKE YOURSELF AT HOME</span><h2>Settings</h2><label class="setting-row"><span><strong>Sound effects</strong><small>Little sounds for your wins</small></span><input type="checkbox" id="soundSetting"></label><label class="setting-row"><span><strong>Light theme</strong><small>Switch up the atmosphere</small></span><input type="checkbox" id="themeSetting"></label><button class="button button-outline clear-data" id="clearData" type="button">Clear saved progress</button></form></dialog>
+  <div class="surprise-overlay" id="surpriseOverlay" aria-hidden="true"><div class="surprise-content"><button id="surpriseClose" aria-label="Close surprise">×</button><span class="surprise-emoji">🪩</span><p id="surpriseMessage">You are officially too cool to be bored.</p></div></div>
+  <script src="app.js"></script>
+</body>
+</html>
